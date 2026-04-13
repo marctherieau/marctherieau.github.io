@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marc Therieau — Software Developer. Systems-first thinking, IT background, building things that are honest, flexible, and maintainable.">
+  <meta property="og:title" content="Marc Therieau — Software Developer">
+  <meta property="og:description" content="Software developer with a background in IT infrastructure. CS student at SNHU. Building from first principles.">
+  <meta property="og:type" content="website">
+
+  <title>Marc Therieau — Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Apply saved theme before page renders to prevent flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('marctherieau-portfolio-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Skip to main content — screen reader / keyboard accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────── -->
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <span class="nav-logo" aria-label="Marc Therieau's portfolio"><a href="#hero">Marc Therieau</a>s</span>
+      <div class="nav-right">
+        <ul class="nav-links" role="list">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="mailto:marctherieau@icloud.com">Contact</a></li>
+        </ul>
+        <button class="btn-cta"
+        onClick="openModal()"
+        aria-haspopup="dialog"
+        aria-label="Open contact form"
+        type ="button">Work with me</button>
+
+        <!-- Dark mode toggle -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          type="button"
+        >
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="12" y1="2"  x2="12" y2="6"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="4.22" y1="4.22"   x2="7.05" y2="7.05"/>
+            <line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/>
+            <line x1="2"  y1="12" x2="6"  y2="12"/>
+            <line x1="18" y1="12" x2="22" y2="12"/>
+            <line x1="4.22" y1="19.78"  x2="7.05" y2="16.95"/>
+            <line x1="16.95" y1="7.05"  x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Main content ────────────────────────────────────────────────── -->
+  <main id="main">
+    <div class="container">
+
+      <!-- ── Hero ──────────────────────────────────────────────────── -->
+      <section id="hero" class="hero" aria-labelledby="hero-heading">
+        <p class="hero-eyebrow">Portfolio</p>
+        <h1 id="hero-heading" class="hero-name">Marc Therieau</h1>
+        <p class="hero-title">Software Developer</p>
+        <p class="hero-bio">
+          Driven by curiosity, grounded in infrastructure, building toward software.
+  I ask why before how — and I haven't found a problem yet
+  that isn't more interesting the deeper you go.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="assets/resume.pdf" class="btn btn-secondary" download>
+            Download resume
+          </a>
+        </div>
+      </section>
+
+      <!-- ── Skills ────────────────────────────────────────────────── -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <p id="skills-heading" class="section-label">Skills</p>
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <p class="skill-group-name">Languages</p>
+            <ul class="skill-tags" role="list" aria-label="Programming languages">
+              <li class="skill-tag">Java</li>
+              <li class="skill-tag">C#</li>
+              <li class="skill-tag">JavaScript</li>
+              <li class="skill-tag">HTML / CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Tools & Frameworks</p>
+            <ul class="skill-tags" role="list" aria-label="Tools and frameworks">
+              <li class="skill-tag">Unity</li>
+              <li class="skill-tag">Eclipse</li>
+              <li class="skill-tag">Git</li>
+              <li class="skill-tag">Maven</li>
+              <li class="skill-tag">Dropwizard</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Design & Architecture</p>
+            <ul class="skill-tags" role="list" aria-label="Design and architecture skills">
+              <li class="skill-tag">OOP</li>
+              <li class="skill-tag">SOLID</li>
+              <li class="skill-tag">System Design</li>
+              <li class="skill-tag">UML</li>
+              <li class="skill-tag">ERD</li>
+              <li class="skill-tag">DFD</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">IT & Infrastructure</p>
+            <ul class="skill-tags" role="list" aria-label="IT and infrastructure skills">
+              <li class="skill-tag">Microsoft 365</li>
+              <li class="skill-tag">Google Workspace</li>
+              <li class="skill-tag">Datto RMM</li>
+              <li class="skill-tag">Autotask</li>
+              <li class="skill-tag">Exchange Online</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Projects ──────────────────────────────────────────────── -->
+      <section id="projects" aria-labelledby="projects-heading">
+        <p id="projects-heading" class="section-label">Projects</p>
+        <div class="projects-grid">
+
+          <article class="project-card" aria-labelledby="proj-1-name">
+            <span class="project-tag tag-java" aria-label="Language: Java">Java</span>
+            <h2 id="proj-1-name" class="project-name">Pure Java Platformer</h2>
+            <p class="project-desc">
+              A tilemap-based 2D platformer built without a game engine.
+              Implements custom physics, AABB collision detection, a 60fps
+              game loop, and coin pickup logic using only Java Swing.
+            </p>
+            <div class="project-footer">
+              <span class="project-meta" aria-label="Technologies: No engine, Pure OOP">
+                No engine &middot; Pure OOP
+              </span>
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Pure Java Platformer on GitHub (opens in new tab)">
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-2-name">
+            <span class="project-tag tag-js" aria-label="Language: JavaScript">JavaScript</span>
+            <h2 id="proj-2-name" class="project-name">CircuiTRY</h2>
+            <p class="project-desc">
+              A card-based circuit documentation tool with NFPA load
+              calculation logic. Built for field use — no backend, no
+              dependencies, just clean domain logic in vanilla JS.
+            </p>
+            <div class="project-footer">
+              <span class="project-meta" aria-label="Technologies: Domain logic, Data-driven">
+                Domain logic &middot; Data-driven
+              </span>
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View CircuiTRY on GitHub (opens in new tab)">
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-3-name">
+            <span class="project-tag tag-unity" aria-label="Technology: Unity and C#">Unity / C#</span>
+            <h2 id="proj-3-name" class="project-name">Flappy Bird Clone</h2>
+            <p class="project-desc">
+              A faithful Flappy Bird recreation in Unity 6 with custom
+              physics, procedural pipe spawning, scoring, and polished
+              game feel. Built from scratch without tutorials.
+            </p>
+            <div class="project-footer">
+              <span class="project-meta" aria-label="Technologies: Unity 6, C#, Game Dev">
+                Unity 6 &middot; C# &middot; Game Dev
+              </span>
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Flappy Bird Clone on GitHub (opens in new tab)">
+                GitHub &rarr;
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="proj-4-name">
+            <span class="project-tag tag-system" aria-label="Type: System Design">System Design</span>
+            <h2 id="proj-4-name" class="project-name">DriverPass — BRD</h2>
+            <p class="project-desc">
+              Full Business Requirements Document for a national driving
+              school platform. Covers functional, non-functional, and
+              infrastructure requirements with ERD and DFD artifacts.
+            </p>
+            <div class="project-footer">
+              <span class="project-meta" aria-label="Course: CS-255 at SNHU">
+                CS-255 &middot; SNHU
+              </span>
+              <a href="assets/driverpass-brd.pdf" class="project-link" aria-label="View DriverPass BRD document">
+                View doc &rarr;
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── About ──────────────────────────────────────────────────── -->
+      <section id="about" aria-labelledby="about-heading">
+        <p id="about-heading" class="section-label">About</p>
+        <div class="about-grid">
+          <p class="about-text">
+            Interested in just about anything with electrons flowing through it.
+I think architecturally before I write code and ask why before how —
+habits picked up from years in IT that now shape how I build software.
+When I'm not at a keyboard you'll find me outside, gaming,
+or deep in whatever rabbit hole technology opened up this week.
+CS student at SNHU. Available in 2026.
+          </p>
+          <dl class="about-details" aria-label="Personal details">
+            <div class="detail-row">
+              <dt class="detail-label">Location</dt>
+              <dd class="detail-value">Brattleboro, VT</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Education</dt>
+              <dd class="detail-value">CS — SNHU (in progress)</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Current role</dt>
+              <dd class="detail-value">IT Support — Europa IT</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Interests</dt>
+              <dd class="detail-value">Game dev, system design</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Available for</dt>
+              <dd class="detail-value">Opportunities in 2026</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="about-cta">
+  <div class="about-cta-text">
+    <strong>Let's build something together.</strong>
+    Have a project in mind, or just want to connect?
+    I'm currently available for opportunities in 2026.
+  </div>
+  <button
+    class="btn btn-primary"
+    onclick="openModal()"
+    aria-haspopup="dialog"
+    aria-label="Open contact form"
+    type="button"
+  >
+    Work with me
+  </button>
+</div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">
+        &copy; 2026 Marc Therieau &mdash; Software Developer &mdash; Keene, NH
+      </p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="https://github.com/marctherieau" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">GitHub</a>
+        <a href="https://linkedin.com/in/marctherieau" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+        <a href="mailto:marctherieau@icloud.com" aria-label="Send email">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+<!-- ── Contact Modal ─────────────────────────────────────────────────── -->
+<div
+  id="contact-modal"
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-heading"
+>
+  <div class="modal">
+    <button
+      class="modal-close"
+      onclick="closeModal()"
+      aria-label="Close contact form"
+      type="button"
+    >&#x2715;</button>
+
+    <p class="modal-eyebrow">Get in touch</p>
+    <h2 id="modal-heading" class="modal-heading">Work with me</h2>
+    <p class="modal-subtext">
+      Have a project, opportunity, or question?
+      Drop me a message and I'll get back to you.
+    </p>
+
+    <form
+      id="contact-form"
+      class="contact-form"
+      action="https://formspree.io/f/xgorenzq"
+      method="POST"
+    >
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input
+          type="text"
+          id="contact-name"
+          name="name"
+          placeholder="Your name"
+          required
+          autocomplete="name"
+        >
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input
+          type="email"
+          id="contact-email"
+          name="email"
+          placeholder="your@email.com"
+          required
+          autocomplete="email"
+        >
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          placeholder="Tell me about your project or opportunity..."
+          required
+        ></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Send message
+        </button>
+      </div>
+    </form>
+
+    <div id="form-success" class="form-success">
+      <div class="form-success-icon">&#10003;</div>
+      <strong>Message sent!</strong>
+      <p>Thanks for reaching out. I'll get back to you soon.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
